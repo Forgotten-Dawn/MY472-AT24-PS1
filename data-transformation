@@ -1,0 +1,9 @@
+```{r}
+#create a function to realize centralization, i.e, make the mean near to 0
+transform_data <- function(data){
+  return(data - mean(data))
+}
+
+# use mtcars dataset to test function
+centered_data <- transform_data(mtcars$mpg)
+mean(centered_data)
