@@ -20,8 +20,8 @@ mean(centered_data)
 ## Square root conversion
 ```{r}
 # Create a function to realize square root convension
-transform_data_v2 <- function(data) {
-  return(sqrt(data))
+transform_data_v2 <- function(data_new) {
+  return(sqrt(data_new))
 }
 
 # use mtchar dataset to test function
