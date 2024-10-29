@@ -357,18 +357,29 @@ display: none;
 </div>
 
 
-<div id="create-a-function-to-realize-centralization-i.e-make-the-mean-near-to-0" class="section level2">
-<h2>Create a function to realize centralization, i.e, make the mean near
-to 0</h2>
-<pre class="r"><code>transform_data &lt;- function(data){
+<div id="centralization" class="section level2">
+<h2>Centralization</h2>
+<pre class="r"><code># Create a function to realize centralization, i.e, make the mean near to 0
+transform_data &lt;- function(data){
   return(data - mean(data))
-}</code></pre>
-</div>
-<div id="use-mtcars-dataset-to-test-function" class="section level2">
-<h2>use mtcars dataset to test function</h2>
-<pre class="r"><code>centered_data &lt;- transform_data(mtcars$mpg)
+}
+
+# use mtcars dataset to test function
+centered_data &lt;- transform_data(mtcars$mpg)
 mean(centered_data)</code></pre>
 <pre><code>## [1] 4.440892e-16</code></pre>
+</div>
+<div id="square-root-conversion" class="section level2">
+<h2>Square root conversion</h2>
+<pre class="r"><code># Create a function to realize square root convension
+transform_data_v2 &lt;- function(data_new) {
+  return(sqrt(data_new))
+}
+
+# use mtchar dataset to test function
+sqrt_data &lt;- transform_data_v2(mtcars$mpg)
+head(sqrt_data)</code></pre>
+<pre><code>## [1] 4.582576 4.582576 4.774935 4.626013 4.324350 4.254409</code></pre>
 </div>
 
 

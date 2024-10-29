@@ -5,16 +5,27 @@ date: "2024-10-29"
 output: html_document
 ---
 
-## Create a function to realize centralization, i.e, make the mean near to 0
+## Centralization
 ```{r}
+# Create a function to realize centralization, i.e, make the mean near to 0
 transform_data <- function(data){
   return(data - mean(data))
 }
-```
 
-## use mtcars dataset to test function
-```{r}
+# use mtcars dataset to test function
 centered_data <- transform_data(mtcars$mpg)
 mean(centered_data)
+```
+
+## Square root conversion
+```{r}
+# Create a function to realize square root convension
+transform_data_v2 <- function(data_new) {
+  return(sqrt(data_new))
+}
+
+# use mtchar dataset to test function
+sqrt_data <- transform_data_v2(mtcars$mpg)
+head(sqrt_data)
 ```
 
